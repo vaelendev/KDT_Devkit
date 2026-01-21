@@ -16,6 +16,7 @@ VOID ListKernelDrivers(VOID)
             entry->DllBase,
             entry->SizeOfImage);
 
-        current = current->Flink;  // ❗ important sinon boucle infinie
+        current = current->Flink;
     }
 }
+

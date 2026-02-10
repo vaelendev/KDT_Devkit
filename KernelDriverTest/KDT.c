@@ -2,8 +2,6 @@
 #include "KDT.h"
 #include "messages.h"
 
-
-// Define the IOCTL code (must match user-mode app)
 #define IOCTL_PING CTL_CODE(FILE_DEVICE_UNKNOWN, 0x800, METHOD_BUFFERED, FILE_ANY_ACCESS)
 
 UNICODE_STRING deviceName = RTL_CONSTANT_STRING(L"\\Device\\KDT"); // Create the device
@@ -100,4 +98,5 @@ NTSTATUS DriverEntry(PDRIVER_OBJECT pDriverObject, PUNICODE_STRING pRegistryPath
 
     DebugMessage("Kernel Driver Test: Loaded");
     return STATUS_SUCCESS;
+
 }
